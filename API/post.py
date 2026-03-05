@@ -7,14 +7,14 @@ def view():
   return {"message":"hello"}
 
 @app.post("/post-to-webhook")
-def put(text :p1.Text_Input):
-   url = "https://fozanahmed.app.n8n.cloud/webhook/e3f2d2aa-33c5-4913-8da6-6a53050df43b"
+async def put(text :p1.Text_Input):
+   url = "https://fozanahmed.app.n8n.cloud/webhook/frist_project"
    try:
     responce = requests.post(url,json={
       "text":text.text,"email":text.email
     })
     return {
-      "status":"success"
+      responce.json()[0]
     }
    except Exception as e:
      return {

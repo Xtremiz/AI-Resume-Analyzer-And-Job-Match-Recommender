@@ -15,7 +15,7 @@ else:
     st.warning("please upload the .pdf file")
 
 if st.button("Submit") and file is not None:
-
+ 
     with st.spinner("Analyzing Resume..."):
         try:
             api_url = "http://127.0.0.1:8000/post-to-webhook"
