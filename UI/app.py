@@ -2,7 +2,6 @@ import streamlit as st
 from SRC.extractor import extract_text_from_pdf,emailextractor
 import requests
 
-    
 st.title("Resume Analyzer")
 file = st.file_uploader("Enter your Resume",type=["pdf","txt"])
 
@@ -36,7 +35,7 @@ if st.button("Submit") and file is not None:
                 st.subheader("Extracted Email (Local):")
                 st.write(email)
 
-                st.subheader("API Response:")
+                st.subheader("Analysis Information:")
                 st.write(result)
 
             else:
