@@ -11,7 +11,7 @@ def view():
 @app.post("/post-to-webhook")
 async def put(text: p1.Text_Input):
 
-    url = "https://fozanahmed.app.n8n.cloud/webhook-test/frist_project"
+    url = "https://fozanahmed.app.n8n.cloud/webhook/frist_project"
 
     try:
         responce = requests.post(url, json={
