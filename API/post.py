@@ -16,14 +16,11 @@ async def put(text: p1.Text_Input):
     try:
         responce = requests.post(url, json={
             "text": text.text,
-            "email": text.email
-        })
+            "email": text.email})
 
 
-        return {
-            "responce": responce.json()
+        return responce.json()[0]['text']
 
-        }
 
     except Exception as e:
         return {

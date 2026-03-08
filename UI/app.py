@@ -1,5 +1,5 @@
 import streamlit as st
-from SRC.extractor import extract_text_from_pdf,emailextractor
+from extractor import extract_text_from_pdf,emailextractor
 import requests
 
 st.title("Resume Analyzer")
